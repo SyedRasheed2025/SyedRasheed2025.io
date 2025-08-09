@@ -1,12 +1,285 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to syedrasheed.io</title>
+    <title>Syed Abdul Rasheed | Data Science & AI Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: #1e293b;
+        }
+        .hero-bg {
+            background-color: #0f172a;
+            background-image: radial-gradient(#334155 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .tag {
+            background-color: #e2e8f0;
+            color: #475569;
+            font-weight: 500;
+        }
+        .section-title {
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+    </style>
 </head>
-<body>
-    <h1>Hello, World!</h1>
-    <p>Welcome to my website!</p>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-slate-800">Syed Abdul Rasheed</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-slate-600 hover:text-blue-600 transition-colors">About</a>
+                <a href="#skills" class="text-slate-600 hover:text-blue-600 transition-colors">Skills</a>
+                <a href="#experience" class="text-slate-600 hover:text-blue-600 transition-colors">Experience</a>
+                <a href="#projects" class="text-slate-600 hover:text-blue-600 transition-colors">Projects</a>
+                <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-all">Contact Me</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-slate-800">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-slate-600 hover:text-blue-600">About</a>
+            <a href="#skills" class="block py-2 text-slate-600 hover:text-blue-600">Skills</a>
+            <a href="#experience" class="block py-2 text-slate-600 hover:text-blue-600">Experience</a>
+            <a href="#projects" class="block py-2 text-slate-600 hover:text-blue-600">Projects</a>
+            <a href="#contact" class="block mt-2 bg-blue-600 text-white px-4 py-2 rounded-full text-center hover:bg-blue-700">Contact Me</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg text-white py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <img src="https://placehold.co/150x150/ffffff/3b82f6?text=SR" alt="Syed Abdul Rasheed" class="w-36 h-36 md:w-48 md:h-48 rounded-full mx-auto mb-6 border-4 border-blue-500 shadow-lg">
+                <h1 class="text-4xl md:text-6xl font-bold mb-2">Syed Abdul Rasheed</h1>
+                <p class="text-xl md:text-2xl text-blue-300 mb-8">B.Tech in Data Science & Artificial Intelligence</p>
+                <div class="flex justify-center space-x-6 text-3xl">
+                    <a href="mailto:syedabdulrasheed026@gmail.com" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/rasheed-syed-a28240220/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/SyedRasheed2025" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors"><i class="fab fa-github"></i></a> <!-- Add your github link -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title">About Me</h2>
+                <div class="max-w-3xl mx-auto text-center text-slate-600 text-lg leading-relaxed">
+                    <p>
+                        Computer Science & Engineering graduate specializing in Data Science and Artificial Intelligence. Skilled in applying machine learning algorithms, developing data-driven models, and creating innovative AI solutions. Proficient in Python, data analysis, and frameworks like TensorFlow and scikit-learn.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Certifications -->
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title">Skills & Certifications</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Technical Skills -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-center text-slate-700">Technical Skills</h3>
+                        <div class="flex flex-wrap justify-center gap-3">
+                            <span class="tag px-4 py-2 rounded-full">Python</span>
+                            <span class="tag px-4 py-2 rounded-full">Flask</span>
+                            <span class="tag px-4 py-2 rounded-full">Web Development</span>
+                            <span class="tag px-4 py-2 rounded-full">Selenium</span>
+                            <span class="tag px-4 py-2 rounded-full">Microsoft PowerBI</span>
+                            <span class="tag px-4 py-2 rounded-full">Java</span>
+                            <span class="tag px-4 py-2 rounded-full">AWS</span>
+                            <span class="tag px-4 py-2 rounded-full">Machine Learning</span>
+                            <span class="tag px-4 py-2 rounded-full">Automation</span>
+                        </div>
+                    </div>
+                    <!-- Certifications -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-center text-slate-700">Certifications</h3>
+                        <div class="space-y-4 text-center">
+                            <p class="flex items-center justify-center gap-3"><i class="fas fa-certificate text-blue-500"></i> IBM Python for Data Science</p>
+                            <p class="flex items-center justify-center gap-3"><i class="fab fa-aws text-blue-500"></i> AWS Fundamentals Development</p>
+                            <p class="flex items-center justify-center gap-3"><i class="fab fa-aws text-blue-500"></i> AWS Machine Learning</p>
+                            <p class="flex items-center justify-center gap-3"><i class="fas fa-brain text-blue-500"></i> DeepLearning.AI - AI for Everyone</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title">Work Experience</h2>
+                <div class="max-w-3xl mx-auto">
+                    <div class="relative pl-8 sm:pl-10 py-6 group">
+                        <!-- Vertical Line -->
+                        <div class="absolute top-0 left-0 h-full w-0.5 bg-slate-200 group-hover:bg-blue-500 transition-colors"></div>
+                        <!-- Circle -->
+                        <div class="absolute top-8 left-[-10px] sm:left-[-12px] w-5 h-5 bg-white border-4 border-slate-200 rounded-full group-hover:border-blue-500 transition-colors"></div>
+                        <h3 class="text-xl font-bold text-slate-800">Software Automation Engineer</h3>
+                        <p class="text-blue-600 font-semibold mb-1">Nua | Riyadh, Saudi Arabia</p>
+                        <p class="text-sm text-slate-500 mb-3">January 2024 - July 2024</p>
+                        <p class="text-slate-600">Developed and implemented automated testing frameworks for website functionality, ensuring consistent performance and cross-browser compatibility. Utilized Selenium to design and execute over 300 test cases, significantly reducing manual testing efforts and improving overall software quality.</p>
+                    </div>
+                    <div class="relative pl-8 sm:pl-10 py-6 group">
+                        <!-- Vertical Line -->
+                        <div class="absolute top-0 left-0 h-full w-0.5 bg-slate-200 group-hover:bg-blue-500 transition-colors"></div>
+                        <!-- Circle -->
+                        <div class="absolute top-8 left-[-10px] sm:left-[-12px] w-5 h-5 bg-white border-4 border-slate-200 rounded-full group-hover:border-blue-500 transition-colors"></div>
+                        <h3 class="text-xl font-bold text-slate-800">IT Engineer</h3>
+                        <p class="text-blue-600 font-semibold mb-1">Future Technologies Ltd. | Al Khobar, Saudi Arabia</p>
+                        <p class="text-sm text-slate-500 mb-3">May 2023 - July 2023</p>
+                        <p class="text-slate-600">Contributed in enhancing network security by aligning configurations with Saudi Aramco’s cybersecurity standards and supporting protocol monitoring for internal compliance. Integrating the ETAP power system model with the SCADA system to enable real-time monitoring, as well as configuring communication between RTUs, ePPC, and the ETAP Real-Time Server to ensure seamless data exchange. Additionally, assisted in preparing detailed technical documentation to support future engineering efforts and maintain system integrity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title">My Projects</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="card rounded-lg overflow-hidden shadow-lg">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">AI Based LMS System</h3>
+                            <p class="text-slate-600 mb-4">Developed a comprehensive AI-powered learning management application to personalize learning, automate grading, and provide real-time analytics.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag text-sm px-3 py-1 rounded-full">Python</span>
+                                <span class="tag text-sm px-3 py-1 rounded-full">Flask</span>
+                                <span class="tag text-sm px-3 py-1 rounded-full">React.js</span>
+                                <span class="tag text-sm px-3 py-1 rounded-full">MongoDB</span>
+                                <span class="tag text-sm px-3 py-1 rounded-full">Redis</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="card rounded-lg overflow-hidden shadow-lg">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Brain Tumor Detection App</h3>
+                            <p class="text-slate-600 mb-4">Developed an ML application to classify tumor types from MRI images with 92% accuracy. Deployed as a Flask web app on AWS EC2 for user predictions.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag text-sm px-3 py-1 rounded-full">Python</span>
+                                <span class="tag text-sm px-3 py-1 rounded-full">Flask</span>
+                                <span class="tag text-sm px-3 py-1 rounded-full">AWS EC2</span>
+                                <span class="tag text-sm px-3 py-1 rounded-full">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="card rounded-lg overflow-hidden shadow-lg">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Farm Protection System</h3>
+                            <p class="text-slate-600 mb-4">A system using ML to detect animals from camera feeds. Upon detection, it triggers specific sound frequencies to deter them from the farm area.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag text-sm px-3 py-1 rounded-full">Python</span>
+                                <span class="tag text-sm px-3 py-1 rounded-full">Computer Vision</span>
+                                <span class="tag text-sm px-3 py-1 rounded-full">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 4 -->
+                    <div class="card rounded-lg overflow-hidden shadow-lg">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Diabetes Prediction Model</h3>
+                            <p class="text-slate-600 mb-4">Developed an ML model for diabetes prediction, achieving 97.2% accuracy and an F1 score of 0.81 using advanced feature engineering.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag text-sm px-3 py-1 rounded-full">Python</span>
+                                <span class="tag text-sm px-3 py-1 rounded-full">Scikit-learn</span>
+                                <span class="tag text-sm px-3 py-1 rounded-full">Data Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 5 -->
+                    <div class="card rounded-lg overflow-hidden shadow-lg">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Decentralized E-Voting System</h3>
+                            <p class="text-slate-600 mb-4">Developed a secure and transparent online e-voting system using blockchain to ensure tamper-proof vote recording and voter anonymity.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag text-sm px-3 py-1 rounded-full">Blockchain</span>
+                                <span class="tag text-sm px-3 py-1 rounded-full">Python</span>
+                                <span class="tag text-sm px-3 py-1 rounded-full">Cryptography</span>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Project Card 6 -->
+                    <div class="card rounded-lg overflow-hidden shadow-lg">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Liver Fibrosis Detection</h3>
+                            <p class="text-slate-600 mb-4">Created an ML application to analyze medical images and identify liver fibrosis stages with an accuracy of 87%.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag text-sm px-3 py-1 rounded-full">Python</span>
+                                <span class="tag text-sm px-3 py-1 rounded-full">Machine Learning</span>
+                                <span class="tag text-sm px-3 py-1 rounded-full">Medical Imaging</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 section-title">Get In Touch</h2>
+                <p class="max-w-2xl mx-auto text-slate-600 mb-8"></p>
+                <a href="mailto:syedabdulrasheed026@gmail.com" class="bg-blue-600 text-white text-lg font-semibold px-8 py-4 rounded-full hover:bg-blue-700 transition-all inline-block">
+                    Say Hello <i class="fas fa-paper-plane ml-2"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 text-2xl mb-4">
+                 <a href="mailto:syedabdulrasheed026@gmail.com" class="text-gray-400 hover:text-white transition-colors"><i class="fas fa-envelope"></i></a>
+                 <a href="https://www.linkedin.com/in/rasheed-syed-a28240220/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin"></i></a>
+                 <a href="https://github.com/SyedRasheed2025" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2025 Syed Abdul Rasheed. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+
 </body>
 </html>
